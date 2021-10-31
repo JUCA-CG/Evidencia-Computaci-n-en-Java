@@ -1,0 +1,67 @@
+Algoritmo Inicio
+	Escribir "Ingrese su usuario"
+	Leer u
+	Escribir "Ingrese su contraseña"
+	Leer p
+n = admin
+	Si u == "USER" & p == "PASSWORD & n == “admin" Entonces
+		Escribir "Bienvenido al sistema"
+		Repetir
+			R <- 1
+			Escribir '¿Qué desea realizar?'
+			Escribir 'Presione (1) para dar de alta a un doctor)'
+			Escribir 'Presione (2) para dar de alta a un paciente'
+			Escribir 'Presione (3) para crear una cita'
+			Leer Opcion
+			Si Opcion==1 Entonces
+				Escribir 'Haz seleccionado dar de alta a un doctor'
+				Escribir  “identificador único'(Generación automática)
+				Leer id
+				Escribir 'Ingrese el nombre completo del doctor'
+				Leer nd
+				Escribir 'Ingrese la especialidad del doctor'
+				Leer ed
+Almacenar id, nd y ed en la base de datos.
+				Escribir 'El doctor '+nd+' con el identificador '+id+' y especialidad en '+ed+' ha sido registrado de manera éxitosa'
+			SiNo
+				Si Opcion==2 Entonces
+					Escribir 'Haz seleccionado dar de alta un paciente'
+					Escribir 'Identificador único del paciente'(Generación automática)
+					Leer ip
+					Escribir 'Ingrese el nombre completo del paciente'
+					Leer np
+Almacenar ip y np .
+					Escribir 'El paciente '+np+' con el idenitificador '+ip+' ha sido registrado con éxito'
+				SiNo
+					Si Opcion==3 Entonces
+						Escribir 'Haz seleccionado crear una cita'
+						Escribir "Identificador único de la cita"(Generación automática)
+						Leer ic
+						Escribir "Ingrese el identificador único del paciente que requiere la cita"
+						Leer ip
+						Escribir "Ingrese el identificador único del doctor que atenderá la cita"
+						Leer id
+						Escribir "Ingrese la fecha de la cita (Formato Fecha: DD/MM/AA)"
+						Leer f
+						Escribir "Ingrese la hora de la cita (Formato hora : 24 horas HH:MM)"
+						Leer h
+						Escribir "Ingrese el motivo de la cita"
+						Leer m
+Almacenar ic,ip, id, f,h y m.
+						Escribir "La cita con el identificador: "+ ic + " del paciente con identificador: " + ip + ", doctor con identificador: " + id + ", fecha y hora : " + F + " , " + H + " y con el motivo : "+ M + ", se ha realizado con éxito"
+					SiNo
+						Escribir 'Favor de ingresar una opción válida'
+					FinSi
+				FinSi
+			FinSi
+			Escribir "Si desea realizar otro tramité presione (0), para salir presione cualquier otro número"
+			Leer op
+			Si op==0 Entonces
+				R <- 0
+			FinSi
+		Hasta Que R==1
+	SiNo
+		Escribir "Usuario y contraseña no válidos"
+	FinSi
+	Escribir "Gracias por utilizar este sistema de administración"
+FinAlgoritmo
