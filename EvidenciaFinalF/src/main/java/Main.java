@@ -42,8 +42,9 @@ public class Main
             String ARCHIVOU = "usuarios.json";
            
                 //Se piden las credenciales 
-                 int r=1;
+                 int s;
                do{
+                s=1;
                user= JOptionPane.showInputDialog("Introduzca su usuario:");
              
                contrasena = JOptionPane.showInputDialog("Introduzca su contraseña:");
@@ -69,12 +70,12 @@ public class Main
             }
             else{
            JOptionPane.showMessageDialog(null, "Usuario y/o contraseña incorrectos,vuelve a intentar");
-          r=2;
+          s=2;
               
             }
           
            
- } while(r==2);
+ } while(s==2);
             System.out.println("Gracias por utilizar el programa");
         }
 
@@ -99,7 +100,7 @@ public class Main
         {  do{
             do{
             r=1;
-            opciones =(JOptionPane.showInputDialog( "¡Hola! " + usuario +  "Menú principal presiona:\n(1)Pacientes\n"
+            opciones =(JOptionPane.showInputDialog( "¡Hola! " + usuario +  "\nMenú principal presiona:\n(1)Pacientes\n"
                     + "(2)Doctores \n(3)Citas\n(4) Registrar un nuevo usuario\n(0) Salir del sistema"));
              if(opciones.isEmpty())
                { JOptionPane.showMessageDialog(null, "Te han faltado datos, o haz ingresado datos erroneos");
@@ -130,7 +131,7 @@ public class Main
                     //
                     case "a":
                       
-                     System.out.println("Creando el paciente..." + Paciente.creaPaciente(archivo));
+                     System.out.println("Creando el paciente..." + Paciente.altaPaciente(archivo));
                      break;
                      //
                     case "b":

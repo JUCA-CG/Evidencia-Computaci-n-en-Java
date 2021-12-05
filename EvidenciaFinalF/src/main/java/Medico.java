@@ -54,11 +54,13 @@ public class Medico extends Persona
         Medico Medico;
             
         try
-        {do{
+        {
+            id += 1;
+            do{
             
             //Se piden los datos del medico
             r=1;
-            id += 1;
+            
             nombre_medico  = JOptionPane.showInputDialog("Ingrese el nombre del Doctor:");
             apellido_medico = JOptionPane.showInputDialog("Ingrese el apellido del Doctor:");
             especialidad = JOptionPane.showInputDialog("Ingrese especialidad del doctor: ");

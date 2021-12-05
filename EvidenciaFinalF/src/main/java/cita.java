@@ -69,13 +69,14 @@ public class cita
         cita Cita;
             
         try
-        {do{
+        { id =+1;
+            do{
               r=1;
         
-            id =+1;
+           
             idPaciente  = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el Id del paciente:"));
             idDoctor = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el id del doctor:"));
-            fecha = JOptionPane.showInputDialog("Ingrese la fecha en formato : DD/MM/AA doctor: ");
+            fecha = JOptionPane.showInputDialog("Ingrese la fecha en formato : DD/MM/AA: ");
             hora = JOptionPane.showInputDialog("Ingrese la hora de cita en formato 24 horas (HH:MM");
             motivo = JOptionPane.showInputDialog("Ingrese el motivo de la cita ");
             if(idPaciente<0||idDoctor<0||fecha.isEmpty()||hora.isEmpty()||hora.isEmpty()||motivo.isEmpty()){

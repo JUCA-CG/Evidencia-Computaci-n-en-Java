@@ -29,7 +29,7 @@ public class Paciente extends Persona
     public void setPaciente(List<Paciente> paciente) {this.Paciente = paciente;}
     
     //Método Que solicita datos
-    public static boolean creaPaciente(String archivo) throws Exception
+    public static boolean altaPaciente(String archivo) throws Exception
     {
         //Variables 
         String nombre, apellido,genero;
@@ -37,8 +37,9 @@ public class Paciente extends Persona
         int id = 0, edad;
          int r=1;
         try
-        { do{  r=1;
-            id += 1;
+        { id += 1;
+        do{  r=1;
+            
             nombre = JOptionPane.showInputDialog("Nombre del paciente:");
             apellido = JOptionPane.showInputDialog("Apellido del paciente:");
             email = JOptionPane.showInputDialog("Correo electrónico del paciente: ");
